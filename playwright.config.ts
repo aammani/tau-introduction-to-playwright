@@ -5,7 +5,7 @@ import baseEnvUrl from './utils/environmentBaseUrl';
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
-require('dotenv').config();
+// require('dotenv').config();
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -21,7 +21,7 @@ export default defineConfig({
 
   /* Retry on CI only */
   // retries: process.env.CI ? 2 : 0,
-  retries: 2,
+  retries: 1,
 
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
@@ -77,15 +77,15 @@ export default defineConfig({
       },
     },
 
-    // {
-    //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'] },
-    // },
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
 
-    // {
-    //   name: 'webkit',
-    //   use: { ...devices['Desktop Safari'] },
-    // },
+    {
+      name: 'webkit',
+      use: { ...devices['Desktop Safari'] },
+    },
 
     {
       name: 'all-browsers-and-tests',
@@ -95,21 +95,21 @@ export default defineConfig({
       },
     },
 
-    // {
-    //   name: 'all-browsers-and-tests',
-    //   use: { 
-    //     baseURL: 'https://playwright.dev/',
-    //      ...devices['Desktop Safari']
-    //   },
-    // },
+    {
+      name: 'all-browsers-and-tests',
+      use: { 
+        baseURL: 'https://playwright.dev/',
+         ...devices['Desktop Safari']
+      },
+    },
 
-    // {
-    //   name: 'all-browsers-and-tests',
-    //   use: { 
-    //     baseURL: 'https://playwright.dev/',
-    //      ...devices['Desktop Firefox']
-    //   },
-    // },
+    {
+      name: 'all-browsers-and-tests',
+      use: { 
+        baseURL: 'https://playwright.dev/',
+         ...devices['Desktop Firefox']
+      },
+    },
 
     // Example only
     {
