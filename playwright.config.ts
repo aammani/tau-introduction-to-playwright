@@ -77,15 +77,15 @@ export default defineConfig({
       },
     },
 
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
+    // {
+    //   name: 'firefox',
+    //   use: { ...devices['Desktop Firefox'] },
+    // },
 
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
+    // {
+    //   name: 'webkit',
+    //   use: { ...devices['Desktop Safari'] },
+    // },
 
     {
       name: 'all-browsers-and-tests',
@@ -95,21 +95,21 @@ export default defineConfig({
       },
     },
 
-    {
-      name: 'all-browsers-and-tests',
-      use: { 
-        baseURL: 'https://playwright.dev/',
-         ...devices['Desktop Safari']
-      },
-    },
+    // {
+    //   name: 'all-browsers-and-tests',
+    //   use: { 
+    //     baseURL: 'https://playwright.dev/',
+    //      ...devices['Desktop Safari']
+    //   },
+    // },
 
-    {
-      name: 'all-browsers-and-tests',
-      use: { 
-        baseURL: 'https://playwright.dev/',
-         ...devices['Desktop Firefox']
-      },
-    },
+    // {
+    //   name: 'all-browsers-and-tests',
+    //   use: { 
+    //     baseURL: 'https://playwright.dev/',
+    //      ...devices['Desktop Firefox']
+    //   },
+    // },
 
     // Example only
     {
